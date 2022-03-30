@@ -3,7 +3,11 @@
 #include "init.h"
 #include "timer.h"
 
-
+/**
+  * @brief  Initializes LEDs
+  * @param  None
+  * @retval None
+  */
 void LED_ini(void)
 {
 	GPIO_InitTypeDef GPIO_struct_LED;  // структура настройки порта подключения светодиода

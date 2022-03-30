@@ -1,8 +1,10 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include "init.h"
 #include "stm32f4xx.h" 
+#include <stdlib.h>
+#include "Types.h"
+#include "init.h"
 #include "timer.h"
 
 extern char str[32];
