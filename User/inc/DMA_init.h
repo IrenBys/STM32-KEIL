@@ -1,14 +1,14 @@
 /**
   ******************************************************************************
-  * @file    spi_init.h
+  * @file    DMA_init.h
   * @author  Irina Bystrova
-  * @brief   This file contains all the functions prototypes SPI.
+  * @brief   This file contains all the functions prototypes DMA.
   ******************************************************************************
   */
 /* Define to prevent recursive inclusion -------------------------------------*/
 
-#ifndef SPI_INIT_H
-#define SPI_INIT_H
+#ifndef USART_INIT_H
+#define USART_INIT_H
 
 /* Includes ------------------------------------------------------------------*/
 
@@ -16,12 +16,11 @@
 
 /* Exported constants --------------------------------------------------------*/
 
-#define CS_OFF GPIO_SetBits(GPIOE, GPIO_Pin_3)
-#define CS_ON GPIO_ResetBits(GPIOE, GPIO_Pin_3)
+/* The buffer size, in data unit */
+#define DMA_buf_size 15
 
 /* Exported functions --------------------------------------------------------*/
 
-void SPI_ini(void);
-void SPI_LED_control(uint8_t Data);
+void DMA_USART_ini(void);
 
-#endif /* SPI_INIT_H */
+#endif /* USART_INIT_H */
