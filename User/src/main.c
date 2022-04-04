@@ -4,38 +4,34 @@
   * @author  Irina Bystrova
   * @brief   This file contains the main function to manage the following 
   *          functionalities:
-	*           + initializes the peripheral modules: LEDs, USART, DMA, SPI	
+	*           + initializes the peripheral modules: USART, DMA, SPI	
   ******************************************************************************
   */
 /* Includes ------------------------------------------------------------------*/
             
 #include "main.h"
 
-/* Variables ----------------------------------------------------------------*/
-
-uint8_t SPIData = 0;
-char str[32] = "DMA transfer!\r\n";
-
 /* Functions -----------------------------------------------------------------*/
-
-
 
 int main (void)
 {	
+	/* Enables clock */
 	RCC_ClocksTypeDef RCC_Clocks1;	
 	RCC_GetClocksFreq(&RCC_Clocks1);
 	
-	LED_ini ();
+	LED_ini();
 	
-	USART_init();
+	/* Uncomment the line below for USART DMA transmition enable*/
+	//USART_init();	
+	//DMA_USART_ini();	
+	//DMA_Cmd(DMA1_Stream6, ENABLE);
 	
-	// SPI_ini ();
 	
-	// SPI_LED_control(SPIData);	
+	/* Uncomment the line below for SPI DMA transmition/receiving enable*/
+	//SPI_ini();	
+	//DMA_SPI_ini();
+	//Check_DMA_SPI();	
 	
-	DMA_USART_ini();
-	
-	DMA_Cmd(DMA1_Stream6, ENABLE);
 	while (1)
 	{
 	 

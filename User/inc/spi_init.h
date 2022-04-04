@@ -22,6 +22,6 @@
 /* Exported functions --------------------------------------------------------*/
 
 void SPI_ini(void);
-void SPI_LED_control(uint8_t Data);
+// void SPI_LED_control(uint8_t Data);
 
 #endif /* SPI_INIT_H */

@@ -22,5 +22,11 @@
 /* Exported functions --------------------------------------------------------*/
 
 void DMA_USART_ini(void);
+void DMA_SPI_ini(void);
+void TX_DMA_SPI(uint8_t data_size);
+void SPIwait(void);
+void SetSPI_Tx(uint8_t Adr, uint8_t Data);
+uint8_t GetSPI_Rx(uint8_t Adr);
+void Check_DMA_SPI(void);
 
 #endif /* USART_INIT_H */

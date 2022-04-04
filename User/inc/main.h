@@ -18,13 +18,9 @@
 #include "FIFO.h"
 #include "init.h"
 #include "timer.h"
+#include "DMA_init.h"
 #include "usart_init.h"
 #include "spi_init.h"
-#include "DMA_init.h"
-
-/* Variables ------------------------------------------------------------------*/
-
-extern char str[32];
 
 /* Defines --------------------------------------------------------------------*/
 
