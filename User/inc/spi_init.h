@@ -17,7 +17,7 @@
 /* Exported constants --------------------------------------------------------*/
 
 #define CS_OFF GPIO_SetBits(GPIOE, GPIO_Pin_3)
-#define CS_ON GPIO_ResetBits(GPIOE, GPIO_Pin_3)
+#define CS_ON  GPIO_ResetBits(GPIOE, GPIO_Pin_3)
 
 /* Exported functions --------------------------------------------------------*/
 

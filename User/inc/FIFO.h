@@ -13,35 +13,36 @@
 /* Includes ------------------------------------------------------------------*/
 
 #include "main.h"
+#include "stdint.h"
 
 /* Exported types ------------------------------------------------------------*/
 
 /** 
-  * @brief  FIFO buffer structure  
+  * @brief  FIFO buffer structure  uint8_t
   */
 typedef struct _FIFO_s
 { 
-	UINT 	 Head,
-				 Tail,
-				 Max;
-  UCHAR *Data;
-	
+    uint8_t Head;
+    uint8_t Tail;
+    uint8_t Max;
+    char *Data;
+    
 }FIFO_s, *pFIFO_s;
 
 /* Exported functions --------------------------------------------------------*/
 
-pFIFO_s FifoCreateFIFO(UINT Max);
+pFIFO_s FifoCreateFIFO(uint8_t Max);
 void FifoDeleteFIFO(pFIFO_s Point);
-BOOL FifoCreatePairFIFO(pFIFO_s *inPoint, UINT inMax, pFIFO_s *outPoint, UINT outMax);
+uint8_t FifoCreatePairFIFO(pFIFO_s *inPoint, uint8_t inMax, pFIFO_s *outPoint, uint8_t outMax);
 void FifoDeletePairFIFO(pFIFO_s *inPoint, pFIFO_s *outPoint);
-BOOL FifoSetByteToFIFO(pFIFO_s Point, UCHAR Data);
-UINT FifoSetNBytesToFIFO(pFIFO_s Point, UCHAR *Data, UINT Len);
-BOOL FifoGetByteFromFIFO(pFIFO_s Point, UCHAR *Data);
-UINT FifoGetNBytesFromFIFO(pFIFO_s Point, UCHAR *Data, UINT Len);
-BOOL FifoGetNBytesFromFIFONoChangePoints(pFIFO_s Point, UCHAR *Data, UINT Len);
-BOOL FifoSetByteNToFIFONoChangePoints(pFIFO_s Point, UCHAR Data, UINT N);
-UINT FifoKeyhitFIFO(pFIFO_s Point);
-UINT FifoPointPlus(UINT p, UINT max);
-BOOL FifoFIFO2FIFO(pFIFO_s inPoint, pFIFO_s outPoint);
+uint8_t FifoSetByteToFIFO(pFIFO_s Point, char Data);
+uint8_t FifoSetNBytesToFIFO(pFIFO_s Point, char *Data, uint8_t Len);
+uint8_t FifoGetByteFromFIFO(pFIFO_s Point, char *Data);
+uint8_t FifoGetNBytesFromFIFO(pFIFO_s Point, char *Data, uint8_t Len);
+uint8_t FifoGetNBytesFromFIFONoChangePoints(pFIFO_s Point, char *Data, uint8_t Len);
+uint8_t FifoSetByteNToFIFONoChangePoints(pFIFO_s Point, char Data, uint8_t N);
+uint8_t FifoKeyhitFIFO(pFIFO_s Point);
+uint8_t FifoPointPlus(uint8_t p, uint8_t max);
+uint8_t FifoFIFO2FIFO(pFIFO_s inPoint, pFIFO_s outPoint);
 
 #endif /*_FIFO_H_ */

@@ -3,10 +3,10 @@
   * @file    usart_init.h
   * @author  Irina Bystrova
   * @brief   This file contains all the functions prototypes for  
-	*					 the initialization LEDs and USART modules.
+    *					 the initialization LEDs and USART modules.
   ******************************************************************************
   */
-	
+    
 /* Define to prevent recursive inclusion -------------------------------------*/
 
 #ifndef USART_INIT_H
@@ -22,7 +22,7 @@
 #define BAUD_RATE   115200
 #define PARITY_BIT  USART_Parity_No
 #define WORD_LENGHT USART_WordLength_8b
-#define STOP_BIT		USART_StopBits_1
+#define STOP_BIT	USART_StopBits_1
 
 /* Exported functions --------------------------------------------------------*/
 
